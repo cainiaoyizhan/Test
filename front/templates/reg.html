@@ -1,0 +1,171 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>福瑞星</title>
+<link rel="stylesheet" type="text/css" href="/static/Assets/css/reset.css"/>
+<script type="text/javascript" src="/static/Assets/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="/static/Assets/js/js_z.js"></script>
+<link rel="stylesheet" type="text/css" href="/static/Assets/css/thems.css">
+<style>
+    #message{
+        position: relative;
+        right: 350px;
+        bottom: -5px;
+    }
+    #info{
+        position: relative;
+        left: -350px;
+        top: 5px;
+    }
+</style>
+</head>
+
+<body>
+<!--头部-->
+<div class="head clearfix">
+    <div class="logo"><a href="index.html"><img src="/static/Assets/images/logo.png" alt="福瑞星"/></a></div>
+    <div class="head_r">
+    	<div class="shopcar"><a href="shopcar.html">我的购物车</a></div>
+        <div class="by"><img src="/static/Assets/images/icon1.png" alt=""/></div>
+    </div>
+</div>
+<ul class="nav clearfix">
+    <li><a href="/">首页</a></li>
+    <li><a href="/search">裸钻搜索</a></li>
+    <li><a href="/product">成品下单区</a></li>
+    <li><a href="/price">国际钻石报价表</a></li>
+    <li><a href="/diploma">证书查询</a></li>
+    <li><a href="/payway">支付方式</a></li>
+    <li class="now"><a href="/about">关于我们</a></li>
+    <li><a href="/contact">联系我们</a></li>
+    <li><a href="/user">会员中心</a></li>
+</ul>
+<!--头部-->
+<div class="space_hx">&nbsp;</div>
+<div class="scd">
+	<div class="pst">
+    	<span>您现在的位置：</span>
+        <a href="/">首页></a>
+        <a href="/register">会员注册</a>
+    </div>
+	<div class="space_hx">&nbsp;</div>
+    <form method="post" action="/register/">
+        {% csrf_token %}
+        <ul class="reg">
+            <li class="clearfix">
+                <span class="title">用户名：</span>
+                <div class="li_m">
+                    <input name="username" type="text">
+
+                </div>
+                <span id="message"></span>
+            </li>
+            <li class="clearfix">
+                <span class="title">密 码：</span>
+                <div class="li_m">
+                    <input name="password" type="password">
+
+                </div>
+            </li>
+            <li class="clearfix">
+                <span class="title">密码确认：</span>
+                <div class="li_m">
+                    <input name="apassword" type="password">
+
+                </div>
+                <span id="info"></span>
+            </li>
+            <li class="clearfix">
+                <span class="title">姓 名：</span>
+                <div class="li_m">
+                    <input name="name" type="text">
+
+                </div>
+            </li>
+            <li class="sex clearfix">
+                <span class="title">性 别：</span>
+                <div class="li_m">
+                    <input name="sex" type="radio" value="" id="boy" checked>
+                    <span><label for="boy">男</label></span>
+                    <input name="sex" type="radio" value="" id="girl">
+                    <span><label for="girl">女</label></span>
+                </div>
+            </li>
+            <li class="clearfix">
+                <span class="title">手机号：</span>
+                <div class="li_m">
+                    <input name="phone" type="text">
+
+                </div>
+            </li>
+            <li class="clearfix">
+                <span class="title">E-mail：</span>
+                <div class="li_m">
+                    <input name="email" type="text">
+
+                </div>
+            </li>
+            <li class="clearfix">
+                <span class="title">联系地址：</span>
+                <div class="li_m">
+                    <input name="address" type="text">
+
+                </div>
+            </li>
+            <li class="yzm clearfix">
+                <span class="title">验证码：</span>
+                <div class="li_m">
+                    <input name="" type="text">
+                    <a href=""><img src="/verifycode" alt=""/></a>
+                </div>
+            </li>
+            <li><p>（温馨提示：请您务必使用真实信息，以便我们与您第一时间取得联系，为您提供更优质的服务）如果您遇到任何疑问，请致电客户经理与您及时沟通。</p></li>
+            <li class="btn"><input name="" type="submit" value="立即注册"></li>
+        </ul>
+    </form>
+</div>
+<div class="space_hx">&nbsp;</div>
+<!--底部-->
+<div class="foot">
+	<p>Copyright 2015 © 珠宝交易平台 All rights reserved. More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a><a href="index.html">最新公告</a> | <a href="index.html">联系我们</a></p>
+</div>
+<!--底部-->
+    <script>
+        $(function(){
+            function csrfSafeMethod(method) {
+                return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method))
+            }
+            $(function () {
+                $.ajaxSetup({
+                    data: {csrfmiddlewaretoken:'{{ csrf_token }}'}
+                })
+            });
+            function check_username() {
+                var username=$("[name='username']").val();
+                $.post('/check_username',{'username':username},
+                    function (data) {
+                        $('#message').html(data);
+                    }
+                );
+            };
+            function check_password() {
+                var password=$("[name='password").val();
+                var apassword=$("[name='apassword").val();
+                if (password==apassword){
+                    $('#info').html('ok')
+                }else{
+                    $('#info').html('两次密码不一致')
+                }
+            }
+            //{#为name='username'控件绑定blur事件#}
+            $("[name='username']").blur(function () {
+                check_username()
+            });
+            $("[name='apassword']").blur(function () {
+                check_password()
+            });
+        })
+    </script>
+</body>
+</html>

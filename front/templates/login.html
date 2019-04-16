@@ -1,0 +1,28 @@
+
+{% extends 'index.html' %}
+
+{% if user %}
+    {% block middle %}
+        <style type="text/css">
+            .myclass{
+                position: absolute;
+                left: 850px;
+                bottom: 300px;
+            }
+
+        </style>
+        <h1 class="myclass">欢迎您：{{ username }}</h1>
+    {% endblock %}
+{% else %}
+    <style>
+        .logout{
+                position: absolute;
+                left: 1000px;
+                bottom: 200px;
+            }
+    </style>
+    <form action="/logout/" method="post">
+        {% csrf_token %}
+        <input type="submit" value="退出" class="logout">
+    </form>
+{% endif %}

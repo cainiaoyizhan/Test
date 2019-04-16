@@ -1,0 +1,295 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>福瑞星</title>
+<link rel="stylesheet" type="text/css" href="/static/Assets/css/reset.css"/>
+<script type="text/javascript" src="/static/Assets/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="/static/Assets/js/js_z.js"></script>
+<link rel="stylesheet" type="text/css" href="/static/Assets/css/thems.css">
+</head>
+
+<body>
+<!--头部-->
+<div class="head clearfix">
+  <div class="logo"><a href="index.html"><img src="/static/Assets/images/logo.png" alt="福瑞星"/></a></div>
+  <div class="head_r">
+    <div class="shopcar"><a href="/shopcar">我的购物车</a></div>
+    <div class="by"><img src="/static/Assets/images/icon1.png" alt=""/></div>
+  </div>
+</div>
+<ul class="nav clearfix">
+  <li><a href="/">首页</a></li>
+  <li class="now"><a href="/search">裸钻搜索</a></li>
+  <li><a href="/product">成品下单区</a></li>
+  <li><a href="/price">国际钻石报价表</a></li>
+  <li><a href="/diploma">证书查询</a></li>
+  <li><a href="/payway">支付方式</a></li>
+  <li><a href="/about">关于我们</a></li>
+  <li><a href="/contact">联系我们</a></li>
+  <li><a href="/user">会员中心</a></li>
+</ul>
+<!--头部-->
+<div class="space_hx">&nbsp;</div>
+<div class="scd">
+  <div class="pst"> <span>您现在的位置：</span> <a href="index.html">首页></a> <a href="index.html">裸钻搜索</a> </div>
+  <div class="space_hx">&nbsp;</div>
+  <div class="search">
+    <div class="maincon">
+    	<div class="selectwarp">
+            <div class="select-box-x" style="padding-top:10px;"> <span>重量<br>
+              Carat</span>
+              <div class="carat">
+                <input id="S_1" type="text" name="carat_1" class="carat-input" maxlength="10" value="">
+                -
+                <input id="S_2" type="text" name="carat_2" class="carat-input" maxlength="10" value="">
+                克拉&nbsp;&nbsp;&nbsp;&nbsp;范围
+                <select id="carat-set">
+                  <option value="">请选择...</option>
+                  <option value="0.1-0.19">0.1-0.19</option>
+                  <option value="0.2-0.29">0.2-0.29</option>
+                  <option value="0.3-0.39">0.3-0.39</option>
+                  <option value="0.4-0.49">0.4-0.49</option>
+                  <option value="0.5-0.59">0.5-0.59</option>
+                  <option value="0.6-0.69">0.6-0.69</option>
+                  <option value="0.7-0.79">0.7-0.79</option>
+                  <option value="0.8-0.89">0.8-0.89</option>
+                  <option value="0.9-0.99">0.9-0.99</option>
+                  <option value="1.00-1.09">1.00-1.09</option>
+                  <option value="1.1-1.49">1.1-1.49</option>
+                  <option value="1.5-1.99">1.5-1.99</option>
+                  <option value="2.0-2.99">2.0-2.99</option>
+                  <option value="3.0-3.99">3.0-3.99</option>
+                  <option value="4.0-4.99">4.0-4.99</option>
+                  <option value="5.0-20">5.0-20</option>
+                </select>
+              </div>
+            </div>
+            <div class="cert-box" style="padding-top:10px;"> <span>证书号<br>
+              CertNo</span>
+              <input type="text" name="ZS" id="ZS" class="item-input" maxlength="50">
+            </div>
+             <div class="select-box2" style="padding-top:10px"> <span>切工<br>
+              Cut</span>
+              <ul class="cut-list">
+                <li ref="Cut"> <a href="javascript:" title="Ideal" ref="A">Ideal</a> </li>
+                <li ref="Cut"> <a href="javascript:" title="EX" ref="B" id="exone">EX</a> </li>
+                <li ref="Cut"> <a href="javascript:" title="VG" ref="C" id="vgone">VG</a> </li>
+                <li ref="Cut"> <a href="javascript:" title="GD" ref="D">GD</a> </li>
+                <li ref="Cut"> <a href="javascript:" title="Fair" ref="E">Fair</a> </li>
+                <li ref="Cut"> <a href="javascript:" title="Poor" ref="F">Poor</a> </li>
+              </ul>
+            </div>
+            <div class="select-box1" style="padding-top:10px">
+              <ul class="fast-list">
+                <li><a href="javascript:" id="3EX" title="3EX None">3EX None</a> </li>
+                <li><a href="javascript:" id="3VG" title="Faint">3VG</a> </li>
+              </ul>
+            </div>
+        </div>
+      <input class="sear_tag" type="hidden" name="Shape" id="Shape" value=",">
+      <input class="sear_tag" type="hidden" name="Color" id="Color" value=",">
+      <input class="sear_tag" type="hidden" name="Clarity" id="Clarity" value=",">
+      <input class="sear_tag" type="hidden" name="Cut" id="Cut" value=",">
+      <input class="sear_tag" type="hidden" name="Polish" id="Polish" value=",">
+      <input class="sear_tag" type="hidden" name="Cert" id="Cert" value=",">
+      <input class="sear_tag" type="hidden" name="Fluor" id="Fluor" value=",">
+      <input class="sear_tag" type="hidden" name="Symmetry" id="Symmetry" value=",">
+      <input class="sear_tag" type="hidden" name="Location" id="Location" value=",">
+      <input class="sear_tag" type="hidden" name="nowpage" id="nowpage" value="0">
+      <input class="sear_tag" type="hidden" name="dbid" id="dbid" value=",">
+      <input class="sear_tag" type="hidden" name="pagejs" id="pagejs" value="30">
+      <input class="sear_tag" type="hidden" name="pxid" id="pxid" value="pxs3">
+      <input class="sear_tag" type="hidden" name="px" id="px" value="1">
+      <input class="sear_tag" type="hidden" name="pagejsnum" id="pagejsnum" value="30">
+      <input class="sear_tag" type="hidden" name="orderby1" id="orderby1" value="">
+      <input class="sear_tag" type="hidden" name="nobrownmilky" id="nobrownmilky" value="">
+      <div class="selectwarp">
+        <div class="select-box"> <span>形状<br>
+          Shape</span>
+          <ul class="shape-list">
+            <li class="shape_1" ref="Shape"> <a href="javascript:" title="圆形" ref="A"></a> </li>
+            <li class="shape_2" ref="Shape"> <a href="javascript:" title="公主方" ref="B"></a> </li>
+            <li class="shape_3" ref="Shape"> <a href="javascript:" title="梨形" ref="C"></a> </li>
+            <li class="shape_4" ref="Shape"> <a href="javascript:" title="心形" ref="D"></a> </li>
+            <li class="shape_5" ref="Shape"> <a href="javascript:" title="橄榄" ref="E"></a> </li>
+            <li class="shape_6" ref="Shape"> <a href="javascript:" title="椭圆" ref="F"></a> </li>
+            <li class="shape_7" ref="Shape"> <a href="javascript:" title="祖母绿" ref="G"></a> </li>
+            <li class="shape_8" ref="Shape"> <a href="javascript:" title="雷蒂恩" ref="H"></a> </li>
+            <li class="shape_9" ref="Shape"> <a href="javascript:" title="垫形" ref="I"></a> </li>
+            <li class="shape_10" ref="Shape"> <a href="javascript:" title="三角形" ref="J"></a> </li>
+          </ul>
+        </div>
+        <div class="select-box2"> <span>抛光<br>
+          Polish</span>
+          <ul class="cut-list">
+            <li ref="Polish"> <a href="javascript:" title="Ideal" ref="A">Ideal</a> </li>
+            <li ref="Polish"> <a href="javascript:" title="EX" ref="B" id="extwo">EX</a> </li>
+            <li ref="Polish"> <a href="javascript:" title="VG" ref="C" id="vgtwo">VG</a> </li>
+            <li ref="Polish"> <a href="javascript:" title="GD" ref="D">GD</a> </li>
+            <li ref="Polish"> <a href="javascript:" title="Fair" ref="E">Fair</a> </li>
+            <li ref="Polish"> <a href="javascript:" title="Poor" ref="F">Poor</a> </li>
+          </ul>
+        </div>
+        <div class="select-box1">
+          <ul class="fast-list">
+            <li> <a href="javascript:" id="without" title="排除奶咖">排除奶咖</a>
+              <input id="withoutInput" type="checkbox" name="without" value="1">
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="selectwarp">
+        <div class="select-box"> <span>颜色<br>
+          Color</span>
+          <ul class="color-list">
+            <li ref="Color"> <a href="javascript:" title="D" ref="D">D</a> </li>
+            <li ref="Color"> <a href="javascript:" title="E" ref="E">E</a> </li>
+            <li ref="Color"> <a href="javascript:" title="F" ref="F">F</a> </li>
+            <li ref="Color"> <a href="javascript:" title="G" ref="G">G</a> </li>
+            <li ref="Color"> <a href="javascript:" title="H" ref="H">H</a> </li>
+            <li ref="Color"> <a href="javascript:" title="I" ref="I">I</a> </li>
+            <li ref="Color"> <a href="javascript:" title="J" ref="J">J</a> </li>
+            <li ref="Color"> <a href="javascript:" title="K" ref="K">K</a> </li>
+            <li ref="Color"> <a href="javascript:" title="L" ref="L">L</a> </li>
+            <li ref="Color"> <a href="javascript:" title="M" ref="M">M</a> </li>
+            <li ref="Color"> <a href="javascript:" title="N" ref="N">N</a> </li>
+          </ul>
+        </div>
+        <div class="select-box"> <span>对称<br>
+          Symmetry</span>
+          <ul class="cut-list">
+            <li ref="Symmetry"> <a href="javascript:" title="Ideal" ref="A">Ideal</a> </li>
+            <li ref="Symmetry"> <a href="javascript:" title="EX" ref="B" id="exthree">EX</a> </li>
+            <li ref="Symmetry"> <a href="javascript:" title="VG" ref="C" id="vgthree">VG</a> </li>
+            <li ref="Symmetry"> <a href="javascript:" title="GD" ref="D">GD</a> </li>
+            <li ref="Symmetry"> <a href="javascript:" title="Fair" ref="E">Fair</a> </li>
+            <li ref="Symmetry"> <a href="javascript:" title="Poor" ref="F">Poor</a> </li>
+          </ul>
+        </div>
+      </div>
+      <div class="selectwarp">
+        <div class="select-box"> <span>净度<br>
+          Clarity</span>
+          <ul class="clarity-list">
+            <li ref="Clarity"> <a href="javascript:" title="FL" ref="A">FL</a> </li>
+            <li ref="Clarity"> <a href="javascript:" title="IF" ref="B">IF</a> </li>
+            <li ref="Clarity"> <a href="javascript:" title="VVS1" ref="C">VVS1</a> </li>
+            <li ref="Clarity"> <a href="javascript:" title="VVS2" ref="D">VVS2</a> </li>
+            <li ref="Clarity"> <a href="javascript:" title="VS1" ref="E">VS1</a> </li>
+            <li ref="Clarity"> <a href="javascript:" title="VS2" ref="F">VS2</a> </li>
+            <li ref="Clarity"> <a href="javascript:" title="SI1" ref="G">SI1</a> </li>
+            <li ref="Clarity"> <a href="javascript:" title="SI2" ref="H">SI2</a> </li>
+            <li ref="Clarity"> <a href="javascript:" title="I1" ref="I">I1</a> </li>
+            <li ref="Clarity"> <a href="javascript:" title="I2" ref="J">I2</a> </li>
+            <li ref="Clarity"> <a href="javascript:" title="I3" ref="K">I3</a> </li>
+          </ul>
+        </div>
+      </div>
+      <div class="selectwarp">
+        <div class="select-box"> <span>荧光<br>
+          Fluor</span>
+          <ul class="fluor-list">
+            <li ref="Fluor"> <a href="javascript:" title="None" ref="A" id="flnone">None</a> </li>
+            <li ref="Fluor"> <a href="javascript:" title="Faint" ref="B">Faint</a> </li>
+            <li ref="Fluor"> <a href="javascript:" title="Medium" ref="C">Medium</a> </li>
+            <li ref="Fluor"> <a href="javascript:" title="Strong" ref="D">Strong</a> </li>
+            <li ref="Fluor"> <a href="javascript:" title="VS" ref="E">VS</a> </li>
+          </ul>
+        </div>
+      </div>
+      <div class="selectwarp">
+        <div class="select-box"> <span>证书<br>
+          Cert</span>
+          <ul class="clarity-list" style="margin-right:30px">
+            <li ref="Cert"> <a href="javascript:" title="GIA" ref="A">GIA</a> </li>
+            <li ref="Cert"> <a href="javascript:" title="HRD" ref="B">HRD</a> </li>
+            <li ref="Cert"> <a href="javascript:" title="IGI" ref="C">IGI</a> </li>
+          </ul>
+          <span>排序<br>
+          OrderBy</span>
+          <ul class="clarity-list">
+            <li ref="orderby1" style="width:85px"> <a style="width:85px" href="javascript:" title="扣点升序" ref="D">扣点升序</a> </li>
+          </ul>
+        </div>
+      </div>
+      <div class="selectwarp selectwarp_a">
+      	<div class="search_a">
+          <input name="submit" class="search-bnt sub" value="确认搜索" type="button">
+          <input name="export" class="search-bnt exp" value="导出搜索结果" type="submit">
+          <input name="reset" class="search-bnt res" value="重置搜索条件" type="reset">
+        </div>
+      </div>
+      
+      
+    </div>
+    <div class="result"><span class="f1">为您筛选出<i id="total">176007</i>颗钻石</span> <span class="f2">今日汇率：<i>6.5</i> 每页显示：<a href="javascript:" class="change_pagesize on">30</a> <a href="javascript:" class="change_pagesize">50</a> <a href="javascript:" class="change_pagesize">100</a></span> </div>
+    <div class="search_m">
+    	<table cellpadding="0" cellspacing="0">
+          <tr>                                       
+            <th scope="col">选择</th>
+            <th scope="col">货号</th>
+            <th scope="col">形状</th>
+            <th scope="col">重量</th>
+            <th scope="col">颜色</th>
+            <th scope="col">净度</th>
+            <th scope="col">切工</th>
+            <th scope="col">抛光</th>
+            <th scope="col">对称</th>
+            <th scope="col">荧光</th>
+            <th scope="col">直径</th>
+            <th scope="col">深度</th>
+            <th scope="col">台面</th>
+            <th scope="col">证书</th>
+            <th scope="col">证书号</th>
+            <th scope="col">折扣</th>
+            <th scope="col">折后价/单粒</th>
+            <th scope="col">订购</th>
+          </tr>
+              {% for data in product_details %}
+                  <tr>
+                    <td><input name="" type="checkbox" value=""></td>
+                    <td>{{ data.goods_num }}</td>
+                    <td>{{ data.shape }}</td>
+                    <td>{{ data.weight }}</td>
+                    <td>{{ data.color }}</td>
+                    <td>VS1</td>
+                    <td>TK</td>
+                    <td>FK</td>
+                    <td>LV</td>
+                    <td>N</td>
+                    <td>{{ data.diameter }}</td>
+                    <td></td>
+                    <td>61.5</td>
+                    <td>IGI</td>
+                    <td>11512114118</td>
+                    <td>1562</td>
+                    <td>1731314</td>
+                    <td><a href="/add_product/{{ data.product.id }}">加入购物车</a></td>
+                  </tr>
+              {% endfor %}
+        </table>
+
+    </div>
+    <div class="pages">
+    	<a href="index.html">首页</a>
+        <a href="index.html">上一页</a>
+        <a href="index.html">1</a>
+        <a href="index.html">2</a>
+        <a href="index.html">3</a>
+        <a href="index.html">4</a>
+        <a href="index.html">5</a>
+        <a href="index.html">6</a>
+        <a href="index.html">下一页</a>
+        <a href="index.html">最后一页</a>
+    </div>
+  </div>
+</div>
+<div class="space_hx">&nbsp;</div>
+<!--底部-->
+<div class="foot">
+  <p>Copyright 2015 © 珠宝交易平台 All rights reserved. More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a><a href="index.html">最新公告</a> | <a href="index.html">联系我们</a></p>
+</div>
+<!--底部-->
+</body>
+</html>

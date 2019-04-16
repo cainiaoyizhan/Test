@@ -1,0 +1,143 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>福瑞星</title>
+<link rel="stylesheet" type="text/css" href="/static/Assets/css/reset.css"/>
+<script type="text/javascript" src="/static/Assets/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="/static/Assets/js/js_z.js"></script>
+<link rel="stylesheet" type="text/css" href="/static/Assets/css/thems.css">
+<style>
+    #load_image{
+        position: relative;
+        left: 235px;
+    }
+</style>
+</head>
+
+<body>
+<!--头部-->
+<div class="head clearfix">
+    <div class="logo"><a href="index.html"><img src="/static/Assets/images/logo.png" alt="福瑞星"/></a></div>
+    <div class="head_r">
+    	<div class="shopcar"><a href="/shopcar">我的购物车</a></div>
+        <div class="by"><img src="/static/Assets/images/icon1.png" alt=""/></div>
+    </div>
+</div>
+<ul class="nav clearfix">
+    <li><a href="/">首页</a></li>
+    <li><a href="/search">裸钻搜索</a></li>
+    <li><a href="/product">成品下单区</a></li>
+    <li><a href="/price">国际钻石报价表</a></li>
+    <li><a href="/diploma">证书查询</a></li>
+    <li><a href="/payway">支付方式</a></li>
+    <li><a href="/about">关于我们</a></li>
+    <li><a href="/contact">联系我们</a></li>
+    <li class="now"><a href="/user">会员中心</a></li>
+</ul>
+<!--头部-->
+<div class="space_hx">&nbsp;</div>
+<div class="scd">
+	<div class="pst">
+    	<span>您现在的位置：</span>
+        <a href="/">首页></a>
+        <a href="/user">会员中心</a>
+    </div>
+    <div class="user clearfix">
+    	<div class="u_l">
+        	<div class="u_la">
+            	<div class="box_h"><span>我的账户</span></div>
+                <div class="box_m">
+                	<img src="/media/{{ img }}" alt=""/>
+                    <p>用户名：{{ username }}</p>
+                </div>
+            </div>
+            <div class="space_hx">&nbsp;</div>
+            <div class="u_lb">
+            	<div class="box_h"><span>个人中心</span></div>
+                <div class="box_m">
+                	<ul>
+                    	<li class="now"><a href="/user">用户信息</a></li>
+                        <li><a href="/shopcar">我的购物车</a></li>
+                        <li><a href="/repwd">修改密码</a></li>
+                        <li><a href="/book">我的留言</a></li>
+                        <li><a href="/address">收货地址</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="u_r">
+        	<div class="r_name">个人资料</div>
+            <div class="user_m clearfix">
+                <form action="/user" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <ul class="u_ml">
+                        <li class="clearfix">
+                            <span class="title">用户名：</span>
+                            <div class="li_m">{{ username }}</div>
+                        </li>
+                        <li class="clearfix">
+                            <span class="title">E-mail：</span>
+                            <div class="li_m">
+                                <input name="email" type="text" placeholder=""><i>*</i>
+                                <p>(请输入正确的邮箱 带*号为必填项)</p>
+                            </div>
+                        </li>
+                        <li class="clearfix sex">
+                            <span class="title">性 别：</span>
+                            <div class="li_m">
+                                <input name="sex" type="radio" value="保密" id="s1" checked>
+                                <span><label for="s1">保密</label></span>
+                                <input name="sex" type="radio" value="男" id="s2">
+                                <span><label for="s2">男</label></span>
+                                <input name="sex" type="radio" value="女" id="s3">
+                                <span><label for="s3">女</label></span>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <span class="title">出生日期：</span>
+                            <div class="li_m">
+                                <input name="datetime" type="text">
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <span class="title">电 话：</span>
+                            <div class="li_m">
+                                <input name="telephone" type="text">
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <span class="title">手 机：</span>
+                            <div class="li_m">
+                                <input name="phone" type="text">
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <span class="title">Q Q：</span>
+                            <div class="li_m">
+                                <input name="qq" type="text">
+                            </div>
+                        </li>
+                        <li class="btn"><input name="" type="submit" value="确 定"></li>
+                    </ul>
+                    <div class="u_mr">
+                        <a href="">
+                            <img src="/media/{{ img }}" alt="" name="image"/>
+                            <p>修改头像</p>
+                            <p class="f10">(注:头像推荐尺寸为120*120)</p>
+                        </a>
+                    </div>
+                    <input type="file" name="image" id="load_image">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="space_hx">&nbsp;</div>
+<!--底部-->
+<div class="foot">
+	<p>Copyright 2015 © 珠宝交易平台 All rights reserved. More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a><a href="index.html">最新公告</a> | <a href="index.html">联系我们</a></p>
+</div>
+<!--底部-->
+</body>
+</html>

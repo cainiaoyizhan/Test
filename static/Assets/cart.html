@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <link rel="stylesheet" href="cart.css">
+  <script src="jquery-1.11.3.js"></script>
+  <script src="cart.js"></script>
+ </head>
+ <body>
+	<div id="container">
+		<!-- 1. 导航 -->
+		<div id="nav">
+			<ul class="rightNav">
+				<li>
+					<a href="">[ 登录 ]</a>
+					,
+					<a href="">[ 注册,有惊喜 ]</a>
+				</li>
+				<li>
+					<b></b>
+					<a href="">果园公告</a>
+				</li>
+				<li>
+					<b></b>
+					<a href="">券卡兑换</a>
+				</li>
+				<li>
+					<b></b>
+					<a href="">手机果园</a>
+				</li>
+			</ul>
+			<ol class="leftNav">
+				<li class="address">
+					<span class="currentAddress">上海</span>
+					<i></i>
+					<ul class="select">
+						<li>上海</li>
+						<li>北京</li>
+						<li>广州</li>
+						<li>深圳</li>
+					</ul>
+				</li>
+				<li>满百包邮(环郊内)</li>
+				<li>
+					<a href="">星夜达</a>
+				</li>
+			</ol>
+		</div>
+		<!-- 2. 横幅 -->
+		<div id="banner">
+			<img src="images/banner1.jpg">
+			<img src="images/banner2.jpg">
+			<ul class="imgNav">
+				<li>1</li>
+				<li>2</li>
+			</ul>
+		</div>
+		<!-- 3. 推荐 -->
+		<div id="commend">
+			<a href="">
+				<img src="images/2ba20598135dbba5e97d241ebfa167d9.jpg">
+			</a>
+			<a href="">
+				<img src="images/2ba20598135dbba5e97d241ebfa167d9.jpg">
+			</a>
+			<a href="">
+				<img src="images/2ba20598135dbba5e97d241ebfa167d9.jpg">
+			</a>
+			<a href="">
+				<img src="images/2ba20598135dbba5e97d241ebfa167d9.jpg" class="lastImg">
+			</a>
+			
+		</div>
+		<!-- 4. 主体 -->
+		<div id="main">
+			<!-- 4.1 标题栏 -->
+			<div class="title">
+				<p class="check-box">
+					<input type="checkbox" name="checkAll" id="checkAll">
+					全选
+				</p>
+				<p class="goods">商品</p>
+				<p class="price">单价</p>
+				<p class="count">数量</p>
+				<p class="sum">小计</p>
+				<p class="action">操作</p>
+			</div>
+			<!-- 4.2 商品展示 -->
+			<div class="content">
+				<!-- 一条商品信息 -->
+				<div class="g-item">
+					<p class="check-box">
+						<input type="checkbox" name="check">
+						<img src="images/1-270x270-2114-226C8S26.jpg">
+					</p>
+					<p class="goods">欢乐时光水果果篮</p>
+					<p class="price">&yen;188</p>
+					<p class="count">
+						<a href="javascript:void(0)" class="minus">-</a>
+						<input type="text" value="1">
+						<a href="javascript:void(0)" class="add">+</a>				
+					</p>
+					<p class="sum">
+						<b>&yen;188</b>
+					</p>
+					<p class="action">移除</p>
+				</div>
+				<div class="g-item">
+					<p class="check-box">
+						<input type="checkbox" name="check">
+						<img src="images/1-270x270-2114-226C8S26.jpg">
+					</p>
+					<p class="goods">欢乐时光水果果篮</p>
+					<p class="price">&yen;188</p>
+					<p class="count">
+						<a href="javascript:void(0)" class="minus">-</a>
+						<input type="text" value="1">
+						<a href="javascript:void(0)" class="add">+</a>				
+					</p>
+					<p class="sum">
+						<b>&yen;188</b>
+					</p>
+					<p class="action">移除</p>
+				</div>
+				<div class="g-item">
+					<p class="check-box">
+						<input type="checkbox" name="check">
+						<img src="images/1-270x270-2114-226C8S26.jpg">
+					</p>
+					<p class="goods">欢乐时光水果果篮</p>
+					<p class="price">&yen;188</p>
+					<p class="count">
+						<a href="javascript:void(0)" class="minus">-</a>
+						<input type="text" value="1">
+						<a href="javascript:void(0)" class="add">+</a>				
+					</p>
+					<p class="sum">
+						<b>&yen;188</b>
+					</p>
+					<p class="action">移除</p>
+				</div>
+			</div>
+
+
+			
+		</div>
+		<!-- 5. 购物车底部工具栏 -->
+		<div id="cart-toolbar">
+			<div class="commit-right">
+				<p class="submit-count">
+					已选择<span></span>件商品
+				</p>
+				<p class="submit-price">
+					共计 : <span></span>
+				</p>
+				<p class="submit-btn">
+					去结算
+				</p>
+			</div>
+		</div>
+	</div>
+ </body>
+</html>

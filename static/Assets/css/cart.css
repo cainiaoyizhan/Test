@@ -1,0 +1,72 @@
+.single_price{
+	position: relative;
+	left: 370px;
+}
+.count_price{
+	position: relative;
+	left: 380px;
+}
+.all_price{
+	position: relative;
+	left: 390px;
+}
+
+#product_num{
+	position: relative;
+	left: 450px;
+	bottom: 5px;
+}
+#add_minus{
+	position: relative;
+	left:450px;
+	bottom:28px;
+}
+
+p.count{
+
+        width:80px;
+
+        text-align:center;
+
+    }
+    .count a{
+
+        float:left;
+
+        width:16px;
+
+        height:18px;
+
+        text-align:center;
+
+        line-height:18px;
+
+        border:1px solid #cacbcb;
+
+        padding:1px 0;
+
+    }
+
+    .count input{
+
+        float:left;
+
+        width:42px;
+
+        height:22px;
+
+        border-left:none;
+
+        border-right:none;
+
+        border-top:1px solid #cacbcb;
+
+        border-bottom:1px solid #cacbcb;
+
+        text-align:center;
+
+        font-size:12px;
+
+        padding:1px;
+
+    }
